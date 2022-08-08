@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		C1275E632893FBA0000295F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1275E622893FBA0000295F7 /* AppDelegate.swift */; };
 		C1275E652893FBA0000295F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1275E642893FBA0000295F7 /* SceneDelegate.swift */; };
-		C1275E672893FBA0000295F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1275E662893FBA0000295F7 /* ViewController.swift */; };
 		C1275E6A2893FBA0000295F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1275E682893FBA0000295F7 /* Main.storyboard */; };
 		C1275E6C2893FBA1000295F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1275E6B2893FBA1000295F7 /* Assets.xcassets */; };
 		C1275E6F2893FBA1000295F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1275E6D2893FBA1000295F7 /* LaunchScreen.storyboard */; };
+		C1275E772894020A000295F7 /* HeroesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1275E762894020A000295F7 /* HeroesCollectionViewController.swift */; };
+		C1275E7928940B0E000295F7 /* HeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1275E7828940B0E000295F7 /* HeroCell.swift */; };
+		C1275E7B2894381B000295F7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1275E7A2894381A000295F7 /* NetworkManager.swift */; };
+		C1275E7D28943869000295F7 /* HeroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1275E7C28943869000295F7 /* HeroModel.swift */; };
+		C1A2A879289A96EA00451C06 /* SelectedHeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A2A878289A96EA00451C06 /* SelectedHeroViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C1275E5F2893FBA0000295F7 /* DogsCollectionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogsCollectionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1275E5F2893FBA0000295F7 /* HeroCollectionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeroCollectionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1275E622893FBA0000295F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1275E642893FBA0000295F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C1275E662893FBA0000295F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C1275E692893FBA0000295F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C1275E6B2893FBA1000295F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1275E6E2893FBA1000295F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C1275E702893FBA1000295F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1275E762894020A000295F7 /* HeroesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesCollectionViewController.swift; sourceTree = "<group>"; };
+		C1275E7828940B0E000295F7 /* HeroCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCell.swift; sourceTree = "<group>"; };
+		C1275E7A2894381A000295F7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		C1275E7C28943869000295F7 /* HeroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroModel.swift; sourceTree = "<group>"; };
+		C1A2A878289A96EA00451C06 /* SelectedHeroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedHeroViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +48,7 @@
 		C1275E562893FBA0000295F7 = {
 			isa = PBXGroup;
 			children = (
-				C1275E612893FBA0000295F7 /* DogsCollectionApp */,
+				C1275E612893FBA0000295F7 /* HeroCollectionApp */,
 				C1275E602893FBA0000295F7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,31 +56,83 @@
 		C1275E602893FBA0000295F7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C1275E5F2893FBA0000295F7 /* DogsCollectionApp.app */,
+				C1275E5F2893FBA0000295F7 /* HeroCollectionApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C1275E612893FBA0000295F7 /* DogsCollectionApp */ = {
+		C1275E612893FBA0000295F7 /* HeroCollectionApp */ = {
+			isa = PBXGroup;
+			children = (
+				C1A2A87D28A11D7700451C06 /* App */,
+				C1A2A87A28A11D3600451C06 /* VC */,
+				C1A2A87E28A11D8500451C06 /* Services */,
+				C1A2A87C28A11D5E00451C06 /* Models */,
+				C1A2A87B28A11D4E00451C06 /* Storyboards */,
+				C1A2A87F28A11D9500451C06 /* Views */,
+				C1275E6B2893FBA1000295F7 /* Assets.xcassets */,
+				C1275E702893FBA1000295F7 /* Info.plist */,
+			);
+			path = HeroCollectionApp;
+			sourceTree = "<group>";
+		};
+		C1A2A87A28A11D3600451C06 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				C1A2A878289A96EA00451C06 /* SelectedHeroViewController.swift */,
+				C1275E762894020A000295F7 /* HeroesCollectionViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		C1A2A87B28A11D4E00451C06 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C1275E682893FBA0000295F7 /* Main.storyboard */,
+				C1275E6D2893FBA1000295F7 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		C1A2A87C28A11D5E00451C06 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C1275E7C28943869000295F7 /* HeroModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C1A2A87D28A11D7700451C06 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				C1275E622893FBA0000295F7 /* AppDelegate.swift */,
 				C1275E642893FBA0000295F7 /* SceneDelegate.swift */,
-				C1275E662893FBA0000295F7 /* ViewController.swift */,
-				C1275E682893FBA0000295F7 /* Main.storyboard */,
-				C1275E6B2893FBA1000295F7 /* Assets.xcassets */,
-				C1275E6D2893FBA1000295F7 /* LaunchScreen.storyboard */,
-				C1275E702893FBA1000295F7 /* Info.plist */,
 			);
-			path = DogsCollectionApp;
+			path = App;
+			sourceTree = "<group>";
+		};
+		C1A2A87E28A11D8500451C06 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C1275E7A2894381A000295F7 /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C1A2A87F28A11D9500451C06 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C1275E7828940B0E000295F7 /* HeroCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C1275E5E2893FBA0000295F7 /* DogsCollectionApp */ = {
+		C1275E5E2893FBA0000295F7 /* HeroCollectionApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C1275E732893FBA1000295F7 /* Build configuration list for PBXNativeTarget "DogsCollectionApp" */;
+			buildConfigurationList = C1275E732893FBA1000295F7 /* Build configuration list for PBXNativeTarget "HeroCollectionApp" */;
 			buildPhases = (
 				C1275E5B2893FBA0000295F7 /* Sources */,
 				C1275E5C2893FBA0000295F7 /* Frameworks */,
@@ -82,9 +142,9 @@
 			);
 			dependencies = (
 			);
-			name = DogsCollectionApp;
+			name = HeroCollectionApp;
 			productName = DogsCollectionApp;
-			productReference = C1275E5F2893FBA0000295F7 /* DogsCollectionApp.app */;
+			productReference = C1275E5F2893FBA0000295F7 /* HeroCollectionApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +162,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C1275E5A2893FBA0000295F7 /* Build configuration list for PBXProject "DogsCollectionApp" */;
+			buildConfigurationList = C1275E5A2893FBA0000295F7 /* Build configuration list for PBXProject "HeroCollectionApp" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +175,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C1275E5E2893FBA0000295F7 /* DogsCollectionApp */,
+				C1275E5E2893FBA0000295F7 /* HeroCollectionApp */,
 			);
 		};
 /* End PBXProject section */
@@ -138,9 +198,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1275E672893FBA0000295F7 /* ViewController.swift in Sources */,
+				C1275E7D28943869000295F7 /* HeroModel.swift in Sources */,
 				C1275E632893FBA0000295F7 /* AppDelegate.swift in Sources */,
 				C1275E652893FBA0000295F7 /* SceneDelegate.swift in Sources */,
+				C1275E7B2894381B000295F7 /* NetworkManager.swift in Sources */,
+				C1A2A879289A96EA00451C06 /* SelectedHeroViewController.swift in Sources */,
+				C1275E7928940B0E000295F7 /* HeroCell.swift in Sources */,
+				C1275E772894020A000295F7 /* HeroesCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +353,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GJ8322288B;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DogsCollectionApp/Info.plist;
+				INFOPLIST_FILE = HeroCollectionApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HeroCollectionApp;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -300,7 +365,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ru.swiftbook.DogsCollectionApp;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.swiftbook.HeroCollectionApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -317,7 +382,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = GJ8322288B;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DogsCollectionApp/Info.plist;
+				INFOPLIST_FILE = HeroCollectionApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HeroCollectionApp;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -328,7 +394,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ru.swiftbook.DogsCollectionApp;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.swiftbook.HeroCollectionApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -339,7 +405,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C1275E5A2893FBA0000295F7 /* Build configuration list for PBXProject "DogsCollectionApp" */ = {
+		C1275E5A2893FBA0000295F7 /* Build configuration list for PBXProject "HeroCollectionApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C1275E712893FBA1000295F7 /* Debug */,
@@ -348,7 +414,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C1275E732893FBA1000295F7 /* Build configuration list for PBXNativeTarget "DogsCollectionApp" */ = {
+		C1275E732893FBA1000295F7 /* Build configuration list for PBXNativeTarget "HeroCollectionApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C1275E742893FBA1000295F7 /* Debug */,

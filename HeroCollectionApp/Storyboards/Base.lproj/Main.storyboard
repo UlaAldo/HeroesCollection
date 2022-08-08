@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ryI-8V-iDI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--HEROES-->
+        <scene sceneID="Jnt-Aj-xZK">
+            <objects>
+                <collectionViewController id="jLQ-yj-8ap" customClass="HeroesCollectionViewController" customModule="HeroCollectionApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="SE9-Ck-SkV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wgu-G5-gr4">
+                            <size key="itemSize" width="100" height="100"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="Z4E-Pf-mA6" customClass="HeroCell" customModule="HeroCollectionApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" id="fmr-dR-Aol">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J20-nc-CNr">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="J20-nc-CNr" secondAttribute="trailing" id="0nb-6K-iW6"/>
+                                        <constraint firstItem="J20-nc-CNr" firstAttribute="top" secondItem="fmr-dR-Aol" secondAttribute="top" id="CEV-ad-f4u"/>
+                                        <constraint firstAttribute="bottom" secondItem="J20-nc-CNr" secondAttribute="bottom" id="M5h-N5-gAd"/>
+                                        <constraint firstItem="J20-nc-CNr" firstAttribute="leading" secondItem="fmr-dR-Aol" secondAttribute="leading" id="Xe2-aQ-0EK"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="heroImageView" destination="J20-nc-CNr" id="z5U-Hn-RDN"/>
+                                    <segue destination="Xrw-sE-O6M" kind="presentation" identifier="sharePhoto" id="ePK-Sm-M4d"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="jLQ-yj-8ap" id="r7B-ja-XIz"/>
+                            <outlet property="delegate" destination="jLQ-yj-8ap" id="ioM-pl-J2D"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="HEROES" id="QN8-r4-3AU"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qET-51-QOE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-304.34782608695656" y="101.78571428571428"/>
+        </scene>
+        <!--Selected Hero View Controller-->
+        <scene sceneID="Mbh-zB-zXt">
+            <objects>
+                <viewController id="Xrw-sE-O6M" customClass="SelectedHeroViewController" customModule="HeroCollectionApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Ac-T0-8s0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bvq-OO-lph">
+                                <rect key="frame" x="20" y="303.5" width="374" height="235"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bvq-OO-lph" secondAttribute="height" multiplier="374:235" id="CVf-YR-In1"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZW-LL-ewz">
+                                <rect key="frame" x="145" y="711" width="124.5" height="31"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=" Tap to Share">
+                                    <imageReference key="image" image="square.and.arrow.up" catalog="system" symbolScale="default"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="shareAction:" destination="Xrw-sE-O6M" eventType="touchUpInside" id="8zy-M5-OJe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Yla-8q-rqA"/>
+                        <color key="backgroundColor" red="0.1960784314" green="0.20000000000000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QZW-LL-ewz" firstAttribute="centerX" secondItem="5Ac-T0-8s0" secondAttribute="centerX" id="8Yt-aG-YsM"/>
+                            <constraint firstItem="bvq-OO-lph" firstAttribute="leading" secondItem="5Ac-T0-8s0" secondAttribute="leadingMargin" id="Yp2-3m-3c0"/>
+                            <constraint firstItem="Yla-8q-rqA" firstAttribute="bottom" secondItem="QZW-LL-ewz" secondAttribute="bottom" constant="100" id="a74-dH-csB"/>
+                            <constraint firstItem="bvq-OO-lph" firstAttribute="centerX" secondItem="5Ac-T0-8s0" secondAttribute="centerX" id="tpg-J2-0wR"/>
+                            <constraint firstItem="bvq-OO-lph" firstAttribute="centerY" secondItem="5Ac-T0-8s0" secondAttribute="centerY" id="zy5-br-Otw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="heroImageView" destination="bvq-OO-lph" id="h3G-JQ-Voh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JAM-mX-LqU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="576.81159420289862" y="101.78571428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Fdn-0L-E36">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ryI-8V-iDI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="sin-aT-U6a">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="30"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jLQ-yj-8ap" kind="relationship" relationship="rootViewController" id="Zcy-9N-nqh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W7w-7B-StU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1164" y="102"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
