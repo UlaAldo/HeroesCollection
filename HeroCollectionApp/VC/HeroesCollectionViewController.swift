@@ -52,6 +52,7 @@ class HeroesCollectionViewController: UICollectionViewController {
             guard let imageData = ImageManager.shared.fetchImage(from: completeLink) else { return}
             DispatchQueue.main.async {
                 cell.heroImageView.image = UIImage(data: imageData)
+                cell.shadowDecorate()
             }
         }
         return cell
@@ -85,4 +86,3 @@ extension HeroesCollectionViewController: UICollectionViewDelegateFlowLayout {
     }
     
 }
-
