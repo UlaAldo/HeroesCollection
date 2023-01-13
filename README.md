@@ -1,4 +1,4 @@
-# HeroesCollectionApp
+# HeroesCollection
 
 Публичный API, архитектура MVC, на основе UICollectionView.
 
